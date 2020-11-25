@@ -33,6 +33,7 @@ public class ArrayMetric implements Metric {
 
     private final MetricsLeapArray data;
 
+    //  样本数量， 时间间隔
     public ArrayMetric(int sampleCount, int intervalInMs) {
         this.data = new MetricsLeapArray(sampleCount, intervalInMs);
     }

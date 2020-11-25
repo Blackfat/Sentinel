@@ -59,21 +59,27 @@ public class Context {
     /**
      * Context name.
      */
+    // context的名称
     private final String name;
 
     /**
      * The entrance node of current invocation tree.
      */
+    // 当前调用链的入口节点
+    // Node中保存了对资源的实时数据的统计，Sentinel中的限流或者降级等功能就是通过Node中的数据进行判断的。
     private DefaultNode entranceNode;
 
     /**
      * Current processing entry.
      */
+    // entry 代表对资源获取或释放的一个凭证
+    // 当前调用链此刻的是哪一个Entry对象在执行
     private Entry curEntry;
 
     /**
      * The origin of this context (usually indicate different invokers, e.g. service consumer name or origin IP).
      */
+    // 调用源名称
     private String origin = "";
 
     private final boolean async;

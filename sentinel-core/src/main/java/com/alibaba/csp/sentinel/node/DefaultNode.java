@@ -38,6 +38,7 @@ import com.alibaba.csp.sentinel.slots.nodeselector.NodeSelectorSlot;
  * @author qinan.qn
  * @see NodeSelectorSlot
  */
+// DefaultNode持有指定的Context和指定的Resource的统计数据
 public class DefaultNode extends StatisticNode {
 
     /**

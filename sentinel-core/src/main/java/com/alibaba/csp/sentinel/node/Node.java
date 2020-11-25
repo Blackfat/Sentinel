@@ -28,6 +28,13 @@ import com.alibaba.csp.sentinel.node.metric.MetricNode;
  * @author Eric Zhao
  * @author leitao
  */
+ /*
+   节点类型	       统计维度	       创建时机
+   EntranceNode Context            ContextUtil中创建Context的时候
+   DefaultNode  Context*Resource   NodeSelectorSlot
+   ClusterNode  Resource           ClusterBuilderSlot
+   StatisticNode 基本的统计节点，没有维度之分
+  */
 public interface Node {
 
     /**
